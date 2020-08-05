@@ -6,7 +6,6 @@ function words(a) {
         }
     }
     console.log("false");
-    return;
 }
 
 words(0);
