@@ -1,6 +1,6 @@
 function words(a) {
     for (let b = 0; b <= 9; b++) {
-        if (a === b) {
+        if (parseInt(a) === b) {
             console.log("true");
             return
         }
@@ -8,14 +8,14 @@ function words(a) {
     console.log("false");
 }
 
-words(0);
-words(9);
-words("0");
-words("9");
-words("啊");
-words("A");
+// words(0);
+// words(9);
+// words("0");
+// words("9");
+// words("啊");
+words('10000000', 2);
 words("ab");
-words(12);
+words(0x11010001);
 words("是吧");
 words("aaaaaAAAA123");
 
