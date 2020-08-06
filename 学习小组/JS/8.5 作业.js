@@ -1,6 +1,6 @@
 function words(a) {
     for (let b = 0; b <= 9; b++) {
-        if (a == b) {
+        if (a === b) {
             console.log("true");
             return
         }
@@ -17,4 +17,6 @@ words("A");
 words("ab");
 words(12);
 words("是吧");
+words("aaaaaAAAA123");
+
 
