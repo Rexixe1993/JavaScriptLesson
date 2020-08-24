@@ -6,7 +6,7 @@ function year(y) {
 
     if (typeof (y) == "number") {
 
-        if (y % 4 == 0 && y % 100 !== 0 || y % 400 == 0) {
+        if (y % 4 === 0 && y % 100 !== 0 || y % 400 === 0) {
             console.log(y + "年是闰年。")
             return;
         } else {
@@ -20,7 +20,7 @@ function year(y) {
 function num(a) {
 
     for (let b = 0; b <= 9; b++) {
-        if (a == String(b)) {
+        if (a === String(b)) {
             console.log("yes");
             return;
         }
@@ -31,6 +31,6 @@ function num(a) {
 year(1990);
 
 
-判断字符串的作业改成递归。
+//判断字符串的作业改成递归。
 
-判断闰年 优化。
+//判断闰年 优化。
