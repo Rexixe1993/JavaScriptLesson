@@ -1,11 +1,13 @@
-function recursion(num1, i = 0) {
+let i = 0;
+
+function recursion(num1) {
 
     let flag = num1[i];   //1 , A
     let signA = "wrong";
 
-    if (i === num1.length) {
+    if (i === num1.length) {                     //递归出口
         console.log("yes")
-        return;
+        // return;
 
     } else {
 
@@ -15,6 +17,10 @@ function recursion(num1, i = 0) {
                 signA = "right";
                 break;
             }
+
+            if (flag !== String(A)) {
+                // continue;
+            }
         }
 
         if (signA === "wrong") {
@@ -23,11 +29,11 @@ function recursion(num1, i = 0) {
         }
 
         if (signA === "right") {
-            recursion(num1, i += 1);
+            i = i + 1;
+            recursion(num1);
         }
     }
 
 }
 
-recursion("12312312312312312");
-recursion("123123123A")
+recursion("");
