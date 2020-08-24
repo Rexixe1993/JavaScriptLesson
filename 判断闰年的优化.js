@@ -10,4 +10,6 @@ function year(y) {
         }
     } else {
         console.log("输入有误！");
-    } 
+    }
+    
+}    

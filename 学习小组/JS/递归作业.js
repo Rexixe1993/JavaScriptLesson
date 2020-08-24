@@ -1,39 +1,22 @@
-let i = 0;
-
-function recursion(num1) {
-
-    let flag = num1[i];   //1 , A
-    let signA = "wrong";
-
-    if (i === num1.length) {                     //递归出口
-        console.log("yes")
-        // return;
-
-    } else {
-
-        for (let A = 0; A <= 9; A++) {
-
-            if (flag === String(A)) {
-                signA = "right";
-                break;
-            }
-
-            if (flag !== String(A)) {
-                // continue;
-            }
-        }
-
-        if (signA === "wrong") {
-            console.log("no");
-            return;
-        }
-
-        if (signA === "right") {
-            i = i + 1;
-            recursion(num1);
+function is_number(num) {
+    for(let i=0; i <= 9; i++) {
+        if(num === i.toString()) {
+            return true;
         }
     }
-
+    return false;
 }
 
-recursion("");
+function string_is_number(str, i = 0) {
+    if(i === str.length) {
+        return true;
+    }
+    if(is_number(str[i])) {
+        string_is_number(str, i++);
+    }
+    return false;
+}
+
+let num = string_is_number("11111")
+
+console.log(num)
